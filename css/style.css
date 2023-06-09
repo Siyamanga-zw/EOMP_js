@@ -1,0 +1,33 @@
+Body{
+    background-image:url('https://i.postimg.cc/LsSNzs3Q/background.jpg')!important;
+}
+.navbar-brand span{
+    color:#f78da7;
+    font-weight: bold;
+}
+img[alt="logo"]{
+    height: 400px;
+}
+#landing{
+  display: flex;
+  margin-top:100px;
+}
+#landing h1{
+    color:#f78da7;
+    font-size: 70px;
+    font-weight: bold;
+}
+#landing h3{
+    font-size: 30px; 
+}
+#landing button{
+    padding:4px 20px;
+    box-shadow:5px 5px 12px black;
+    border-radius: 12px;
+    background-color: #f78da7;
+    font-weight: bold;
+}
+#landing button a{
+    text-decoration: none;
+    color:black;
+}
