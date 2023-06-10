@@ -31,3 +31,45 @@ img[alt="logo"]{
     text-decoration: none;
     color:black;
 }
+@media only screen and (max-width: 600px){
+    Body{
+     background-color: blanchedalmond!important;
+    }
+   #landing{
+    display: block;
+    font-size: 40px!important;
+    margin-right: 12px !important;;
+   }
+   #landing h1{
+    color:#f78da7;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right:12px!important;
+}
+#landing h1 span{
+    color:#f78da7;
+    font-size: 20px!important;
+    font-weight: bold;
+    margin-right:12px;
+}
+#landing h3{
+    font-size: 18px; 
+}
+#landing h3 span{
+    font-size: 18px!important; 
+}
+   img[alt="logo"]{
+    display: block;
+    height: 400px;
+   width: 300px;
+   margin-right:12px!important;
+}
+#landing button{
+    padding:4px 10px;
+    box-shadow:5px 5px 12px black;
+    border-radius: 12px;
+    background-color: #f78da7;
+    font-weight:none!important;
+    font-size: 17px;
+}
+}

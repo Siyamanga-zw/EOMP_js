@@ -1,7 +1,7 @@
 let home = document.querySelector('#home');
 let homeContent=[
     {
-        h1:'GirlHeaven <br> <span style="margin-left:90px;font-size:60px;">beauty bar</span>',
+        h1:'GirlHeaven <br> <span style="margin-left:90px;font-size:60px;">Fragrancies</span>',
         h3:'<span style="font-weight: bold;font-size:40px;">Let us transport you to GirlHeaven.</span><br>Get a wonderful and memorable experience from the minute you walk in.',
         btn:'ShopNow',
         img:'https://i.postimg.cc/DyQKSGzJ/top-of-background.jpg',
