@@ -31,6 +31,10 @@ img[alt="logo"]{
     text-decoration: none;
     color:black;
 }
+footer{
+    margin-top: 50px!important;
+    background-color: #f78da7!important;
+}
 @media only screen and (max-width: 7 00px){
     Body{
      background-color: blanchedalmond!important;
