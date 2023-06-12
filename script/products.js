@@ -37,7 +37,6 @@ let productsContent=[
         price:'R 7880.00'
     },
 ]
-
 productsContent.forEach((content) => {
     products.innerHTML +=`
     <div class="card" style="width: 18rem; margin:20px; height:30rem;">
