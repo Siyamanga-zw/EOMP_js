@@ -44,7 +44,29 @@ productsContent.forEach((content) => {
   <div class="card-body">
     <h5 class="card-title">${content.name}</h5>
     <p class="card-text">${content.price}</p>
-    <a href="#" class="btn">Add to cart</a>
+    <a href="#" class="addbtn">Add to cart</a>
   </div>
 </div>`
 });
+
+
+let addCart=document.querySelector('.addbtn');
+let show = document.querySelector('.cart span')
+
+for (let i=0; i < addCart.length; i++){
+    addCart[i].addEventlistener('click',()=>{
+        cartCount();
+    })
+}
+function cartCount(){
+    let productCount = localStorage.getItem('cartsCount');
+    productCount = parseInt(productCount);
+    if(productCount){
+localStorage.setItem('cartsCount', productCount +1);
+show.textContent=productCount + 1
+    }else{
+        localStorage.setItem('cartsCount',1)
+        show.textContent=productCount = 1 ;
+    }
+   
+}
