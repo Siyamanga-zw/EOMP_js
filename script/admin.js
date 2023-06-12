@@ -1,8 +1,5 @@
 let tableRow = document.querySelector('#tableRow');
-let displayContent = 
-JSON.parse(localStorage?.getItem("products")) ?
-JSON.parse(localStorage?.getItem("products")) : 
-localStorage.setItem("products", JSON.stringify(
+let displayContent = JSON.parse(localStorage.getItem('products')) || 
     [
       {
         id: 1,
@@ -53,7 +50,8 @@ localStorage.setItem("products", JSON.stringify(
         btn2: 'delete',
       },
     ]
-));
+    displayData();
+
   
 function addItem(){
     let id = document.querySelector('#ID').value;
@@ -71,6 +69,7 @@ function addItem(){
    };
    console.log(newObj);
    displayContent.push(newObj);
+   localStorage.setItem('products', JSON.stringify(displayContent));
    displayData()
 }
 
