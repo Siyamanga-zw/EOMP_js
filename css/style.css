@@ -31,6 +31,15 @@ img[alt="logo"]{
     text-decoration: none;
     color:black;
 }
+/* admin */
+#admin button{
+    padding:4px 20px;
+    box-shadow:5px 5px 12px black;
+    border-radius: 12px;
+    background-color: #f78da7;
+    font-weight: bold;
+    width:120px;
+}
 footer{
     margin-top: 50px!important;
     background-color: #f78da7!important;
