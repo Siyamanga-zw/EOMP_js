@@ -31,6 +31,10 @@ img[alt="logo"]{
     text-decoration: none;
     color:black;
 }
+/* admin */
+img[alt="tables"]{
+    height: 200px;
+}
 footer{
     margin-top: 50px!important;
     background-color: #f78da7!important;
