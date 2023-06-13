@@ -31,6 +31,21 @@ img[alt="logo"]{
     text-decoration: none;
     color:black;
 }
+/* featured */
+#featured img {
+        height: 100vh!important;
+        max-height: 100vh!important;
+        width: 100vw!important;
+        display: flex!important;
+        flex-direction: row!important;
+        overflow: hidden!important;
+        position: relative!important;
+}
+#aboutUs{
+    margin-top: 10%;
+    height: fit-content;
+    background-color: bisque;
+}
 /* products */
 .card{
     display: flex;

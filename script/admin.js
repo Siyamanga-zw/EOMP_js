@@ -25,7 +25,7 @@ function displayData() {
         <tr>
           <th scope="row">${content.id}</th>
           <td>${content.name}</td>
-          <td><img src="${content.image}" alt="tables"></td>
+          <td><img src="${content.image}" loading="lazy" alt="tables"></td>
           <td>${content.price}</td>
           <td><button class="edit-btn" data-bs-toggle="modal" data-bs-target="#${content.id}">Edit</button>
         <div class="modal fade" id="${content.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -77,25 +77,8 @@ function deleteItem(id) {
   localStorage.setItem("products", JSON.stringify(displayContent));
   displayData();
 }
-      // edit
-    //update
-    // const b =0;
-    // function update(b) {
-    //   let info = create [b-1];
-    // document.querySelector("ID").value = info.id;
-    //    document.querySelector("#Name").value= info.name;
-    //     document.querySelector("#Image").value = info.image;
-    //   document.querySelector("#Price").value =info.price;
-    //   b=1;
-    // }
-    // function editModal(){
-    //   let info = create [b-1];
-    //   document.querySelector("ID").value = info.id;
-    //      document.querySelector("#Name").value= info.name;
-    //       document.querySelector("#Image").value = info.image;
-    //     document.querySelector("#Price").value =info.price;
       
-    // }
+ 
 function EditProduct(item) {
   // debugger
   this.id = document.querySelector(`#ID-${item.id}`).value
