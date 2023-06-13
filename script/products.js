@@ -48,7 +48,7 @@ try{
     productsContent.forEach((show) => {
         products.innerHTML+=`
         <div class="card" style="width: 20rem; margin:20px; height:30rem;">
-        <img src="${show.image}" class="card-img-top" alt="products">
+        <img src="${show.image}" loading="lazy" class="card-img-top" alt="products">
         <div class="card-body">
           <h5 class="card-title">${show.name}</h5>
           <p class="card-text">${show.price}</p>
