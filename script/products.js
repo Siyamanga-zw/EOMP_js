@@ -1,3 +1,4 @@
+
 let products = document.querySelector('#products .row:last-child');
 let productsContent = JSON.parse(localStorage?.getItem("products")) ? 
     JSON.parse(localStorage?.getItem("products")) : 
@@ -60,5 +61,6 @@ try{
     location.reload()
 }
 function addCart(){
-    alert('your item has been added to cart')
-}
+    alert('your item has been added to cart')}
+    
+ 
