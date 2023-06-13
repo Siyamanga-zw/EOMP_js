@@ -1,60 +1,5 @@
 let tableRow = document.querySelector('#tableRow');
-let displayContent = 
-JSON.parse(localStorage?.getItem("products")) ?
-JSON.parse(localStorage?.getItem("products")) : 
-localStorage.setItem("products", JSON.stringify(
-    [
-      {
-        id: 1,
-        name: 'Lancome',
-        image: 'https://i.postimg.cc/8sQt6C2d/lanc-ome.png',
-        price: 'R 2830.00',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-      {
-        id: 2,
-        name: 'Poison Girl',
-        image: 'https://i.postimg.cc/kM2L6Rrm/poison-girl.webp',
-        price: 'R 1799.99',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-      {
-        id: 3,
-        name: 'Royalty scent',
-        image: 'https://i.postimg.cc/xTzZTwwy/royalty.webp',
-        price: 'R 2000.50',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-      {
-        id: 4,
-        name: 'Ellie saab',
-        image: 'https://i.postimg.cc/nhBdKq2y/eliesaab.jpg',
-        price: 'R 1010.00',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-      {
-        id: 5,
-        name: 'Narciso rodriguez',
-        image: 'https://i.postimg.cc/J0YFgmHS/1590012511-b37a1be8-95a1-44c7-81c8-ef5801a48026.jpg',
-        price: 'R 3899.99',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-      {
-        id: 6,
-        name: 'chance channel',
-        image: 'https://i.postimg.cc/y8ZGfM1r/chance-channl.jpg',
-        price: 'R 7880.00',
-        btn1: 'edit',
-        btn2: 'delete',
-      },
-    ]
-));
-  
+let displayContent = JSON.parse(localStorage?.getItem("products")) 
 function addItem(){
     let id = document.querySelector('#ID').value;
     let productName = document.querySelector('#Name').value;
@@ -65,12 +10,11 @@ function addItem(){
     id:parseInt(id),
     name:productName,
     image:image,
-    price:price,
-    btn1:'edit',
-    btn2:'delete',
+    price:price
    };
    console.log(newObj);
    displayContent.push(newObj);
+   localStorage.setItem('products', JSON.stringify(displayContent));
    displayData()
 }
 
@@ -83,11 +27,89 @@ function displayData() {
           <td>${content.name}</td>
           <td><img src="${content.image}" alt="tables"></td>
           <td>${content.price}</td>
-          <td><button>${content.btn1}</button></td>
-          <td><button>${content.btn2}</button></td>
-        </tr>
+          <td><button class="edit-btn" data-bs-toggle="modal" data-bs-target="#${content.id}">Edit</button>
+        <div class="modal fade" id="${content.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+          <form class="form">
+          <div class="mb-3">
+            <label for="ID" class="col-form-label">ID:</label>
+            <input type="text" class="form-control" id="ID-${content.id}" value="${content.id}">
+          </div>
+          <div class="mb-3">
+            <label for="Name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="Name-${content.id}" value="${content.name}">
+          </div>
+          <div class="mb-3">
+            <label for="Image" class="col-form-label">Image:</label>
+            <input type="text" class="form-control" id="Image-${content.id}" value="${content.image}">
+          </div>
+          <div class="mb-3">
+            <label for="Price" class="col-form-label">Price:</label>
+            <input type="text" class="form-control" id="Price-${content.id}" value="${content.price}" >
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick='new EditProduct(${JSON.stringify(content)})'>Save changes</button>
+          </div>
+          </td>
+        </div>
+      </div>
+    </div>
+      <td><button class="del" onclick="deleteItem(${content.id})">Delete</button></td>
+   </tr>
       `});
 
 }
 displayData()
 
+
+
+// delete
+function deleteItem(id) {
+  displayContent = displayContent.filter((content) => content.id !== id);
+  localStorage.setItem("products", JSON.stringify(displayContent));
+  displayData();
+}
+      // edit
+    //update
+    // const b =0;
+    // function update(b) {
+    //   let info = create [b-1];
+    // document.querySelector("ID").value = info.id;
+    //    document.querySelector("#Name").value= info.name;
+    //     document.querySelector("#Image").value = info.image;
+    //   document.querySelector("#Price").value =info.price;
+    //   b=1;
+    // }
+    // function editModal(){
+    //   let info = create [b-1];
+    //   document.querySelector("ID").value = info.id;
+    //      document.querySelector("#Name").value= info.name;
+    //       document.querySelector("#Image").value = info.image;
+    //     document.querySelector("#Price").value =info.price;
+      
+    // }
+function EditProduct(item) {
+  // debugger
+  this.id = document.querySelector(`#ID-${item.id}`).value
+  this.name = document.querySelector(`#Name-${item.id}`).value
+  this.image = document.querySelector(`#Image-${item.id}`).value 
+  this.price = document.querySelector(`#Price-${item.id}`).value
+
+  let index = displayContent.findIndex( p=>{
+    return p.id === item.id
+  })
+  console.log(item.id, index);
+  displayContent[index] = Object.assign({}, this)
+  localStorage.setItem("products", JSON.stringify(displayContent));
+  location.reload()
+}
+
+    
