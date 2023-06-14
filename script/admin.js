@@ -95,4 +95,23 @@ function EditProduct(item) {
   location.reload()
 }
 
+    // SORT
+
+    function sortItems() {
+      displayContent.sort((a, b) => {
+        // Compare the names of the items for sorting
+        let A = a.name.toUpperCase();
+        let B = b.name.toUpperCase();
+    
+        if (A < B) {
+          return -1;
+        }
+        if (A > B) {
+          return 1;
+        }
+        return 0;
+      });
+    
+      displayData();
+    }
     
