@@ -1,4 +1,3 @@
-
 let products = document.querySelector('#products .row:last-child');
 let productsContent = JSON.parse(localStorage?.getItem("products")) ? 
     JSON.parse(localStorage?.getItem("products")) : 
@@ -39,10 +38,9 @@ let productsContent = JSON.parse(localStorage?.getItem("products")) ?
                 name:'chance channel',
                 image:'https://i.postimg.cc/y8ZGfM1r/chance-channl.jpg',
                 price:'R 7880.00'
-            },
+            }
         ]
     ))
-
 
 try{
     productsContent.forEach((show) => {
@@ -52,7 +50,7 @@ try{
         <div class="card-body">
           <h5 class="card-title">${show.name}</h5>
           <p class="card-text">${show.price}</p>
-          <a href="#" class="btn" onclick="addCart()">Add to cart</a>
+         <a href="#" class="btn" id="addItem" onclick='addToCart(${JSON.stringify(show)})'>Add to cart</a>
         </div>
       </div>
       `
@@ -60,7 +58,11 @@ try{
 }catch(e) {
     location.reload()
 }
-function addCart(){
-    alert('your item has been added to cart')}
-    
- 
+
+let carts = [];
+function addToCart(item) {
+    carts.push(item)
+  localStorage.setItem("cartItems", JSON.stringify(carts));
+  alert("Item added to cart");
+}
+
