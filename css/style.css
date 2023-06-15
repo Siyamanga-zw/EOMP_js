@@ -50,7 +50,13 @@ img[alt="logo"]{
 #aboutUs{
     margin-top: 10%;
     height: fit-content;
-    background-color: bisque;
+    background-color: transparent;
+}
+#aboutUs input{
+    border-color: black;
+}
+#aboutUs textarea{
+    border-color: black;
 }
 /* products */
 .card{
@@ -90,7 +96,7 @@ footer{
 }
 
 
-@media only screen and (width < 400px){
+@media only screen and (width < 600px){
     Body{
      background-color: blanchedalmond!important;
     }
@@ -112,16 +118,19 @@ footer{
     margin-right:12px;
 }
 #landing h3{
-    font-size: 18px; 
+    font-size: 15px; 
+    
 }
 #landing h3 span{
-    font-size: 18px!important; 
+    font-size: 14px!important; 
 }
    img[alt="logo"]{
     display: block;
     height: 400px;
-   width: 300px;
+   width: 200px;
    margin-right:12px!important;
+   margin-left: 10px;
+   margin-top: 10px;
 }
 #landing button{
     padding:4px 10px;
@@ -151,7 +160,13 @@ footer{
     flex-flow: column wrap;
     align-items: center;
     height: 500px !important;
-    width: 17rem !important;}
+    width: 17rem !important;
+}
+.check table
+ th:nth-child(3),
+td:nth-child(3){
+        display: ;
+    }
     /* admin */
 
     th:nth-child(3),

@@ -82,3 +82,25 @@ function outOfStock(itemId) {
     return inOrout
     
 }
+
+let priceSelect = document.getElementById("Prices");
+
+priceSelect.addEventListener("change", filterProducts);
+
+function filterProducts() {
+  let selectedRange = priceSelect.value;
+  let products = document.getElementsByClassName("card");
+
+  for (let i = 0; i < products.length; i++) {
+    let product = products[i];
+    let productPrice = parseFloat(product.getElementsByClassName("card-text")[0].textContent.replace("R ", ""));
+
+    if (selectedRange === "all" ||
+      (selectedRange === "0-2000" && productPrice <= 2000) ||
+      (selectedRange === "2000+" && productPrice >= 2000)) {
+      product.style.display = "block";
+    } else {
+      product.style.display = "none";
+    }
+  }
+}
