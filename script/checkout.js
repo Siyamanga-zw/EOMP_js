@@ -15,7 +15,7 @@ function displayContent() {
     `;
   });
 
-  calculateTotalPrice(); // Call the calculateTotalPrice function to update the total
+  calculateTotalPrice(); // Call the calculatePrice function to update the total
 }
 
 
