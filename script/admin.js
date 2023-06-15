@@ -58,11 +58,10 @@ function displayData() {
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" onclick='new EditProduct(${JSON.stringify(content)})'>Save changes</button>
           </div>
-          </td>
         </div>
       </div>
     </div>
-      <td><button class="del" onclick="deleteItem(${content.id})">Delete</button></td>
+    <button class="del" onclick="deleteItem(${content.id})">Delete</button></td>
    </tr>
       `});
 
