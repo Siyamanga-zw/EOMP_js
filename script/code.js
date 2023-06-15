@@ -15,7 +15,7 @@ homeContent.forEach((content)=>{
   <div class="row align-items-center">
     <div class="col">
       <h1 class="card-title">${content.h1}</h1><br>
-      <h3 class="card-text">${content.h3}</h3>
+      <h3 class="card-text px-2">${content.h3}</h3>
       <button class="card-text"><a href="../html/products.html">${content.btn}</a></button>
     </div>
     <div class="col">

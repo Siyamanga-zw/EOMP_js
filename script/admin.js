@@ -75,7 +75,7 @@ function deleteItem(item) {
   let index = displayContent.findIndex( p=>{
     return p.id == item.id
   })
-  // displayContent = displayContent.filter((content) => content.id !== id);
+  
   displayContent.splice(index, 1)
   localStorage.setItem("products", JSON.stringify(displayContent));
   displayData();
@@ -102,7 +102,7 @@ function EditProduct(item) {
 
     function sortItems() {
       displayContent.sort((a, b) => {
-        // Compare the names of the items for sorting
+        
         let A = a.name.toUpperCase();
         let B = b.name.toUpperCase();
     
