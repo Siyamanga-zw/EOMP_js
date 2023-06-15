@@ -1,7 +1,11 @@
-Body{
+body{
     background-image:url('https://i.postimg.cc/LsSNzs3Q/background.jpg')!important;
 }
 .navbar-brand span{
+    color:#f78da7;
+    font-weight: bold;
+}
+.nav-link:hover{
     color:#f78da7;
     font-weight: bold;
 }
@@ -85,7 +89,7 @@ footer{
 }
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (width < 400px){
     Body{
      background-color: blanchedalmond!important;
     }
@@ -143,10 +147,10 @@ footer{
 }
 .card{
     display: flex;
+    flex-flow: column wrap;
     align-items: center;
-    justify-content: space-between;
     height: 500px !important;
-    width: 200px !important;}
+    width: 17rem !important;}
     /* admin */
 
     th:nth-child(3),

@@ -61,7 +61,7 @@ function displayData() {
         </div>
       </div>
     </div>
-    <button class="del" onclick="deleteItem(${content.id})">Delete</button></td>
+    <button class="del" onclick='deleteItem(${JSON.stringify(content)})'>Delete</button></td>
    </tr>
       `});
 
@@ -71,8 +71,12 @@ displayData()
 
 
 // delete
-function deleteItem(id) {
-  displayContent = displayContent.filter((content) => content.id !== id);
+function deleteItem(item) {
+  let index = displayContent.findIndex( p=>{
+    return p.id == item.id
+  })
+  // displayContent = displayContent.filter((content) => content.id !== id);
+  displayContent.splice(index, 1)
   localStorage.setItem("products", JSON.stringify(displayContent));
   displayData();
 }

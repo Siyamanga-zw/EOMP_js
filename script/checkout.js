@@ -32,7 +32,7 @@ function calculateTotalPrice() {
     totalPrice += parseFloat(priceWithoutR);
   });
 
-  total.innerHTML = `Total Amount Due: ${totalPrice.toFixed(2)}`;
+  total.innerHTML = `Total Amount Due:R ${totalPrice.toFixed(2)}`;
 }
 
 displayContent();
