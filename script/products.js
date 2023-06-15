@@ -59,18 +59,21 @@ try{
     location.reload()
 }
 
-let carts = [];
+let carts = JSON.parse(localStorage.getItem('cartItems'))?JSON.parse(localStorage.getItem('cartItems')):[];
+localStorage.setItem('cartItems', JSON.stringify(carts))
 let inOrout=false;
 function addToCart(item) {
     if (outOfStock(item.id)) {
         alert("OUT OF STOCK!")
     } else {
         carts.push(item)
+        console.log(carts);
         localStorage.setItem("cartItems", JSON.stringify(carts));
         alert("Item added to cart");
     }
    
 }
+
 function outOfStock(itemId) {
    
     carts=JSON.parse(localStorage.getItem('cartItems'))
