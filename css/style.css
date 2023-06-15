@@ -41,6 +41,7 @@ img[alt="logo"]{
         overflow: hidden!important;
         position: relative!important;
 }
+/* about us */
 #aboutUs{
     margin-top: 10%;
     height: fit-content;
@@ -125,6 +126,12 @@ footer{
     font-weight:none!important;
     font-size: 17px;
 }
+/* about */
+.col{
+    text-align: center!important;
+    align-items: center!important;
+    padding-right: 1rem!important;
+}
 /* products */
 #products h1{
     margin-left:10px!important;
@@ -140,6 +147,39 @@ footer{
     justify-content: space-between;
     height: 500px !important;
     width: 200px !important;}
+    /* admin */
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      display: none;
+    }
+    th,
+    td {
+      width: calc(100% / 5);
+    }
+    /* .del{
+        width: 15px;
+    } */
+    /* th:nth-child(5),
+    td:nth-child(5),
+    th:nth-child(6),
+    td:nth-child(6) {
+      display: none;
+    }
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 50%;
+      grid-column: 1 / span 2;
+    
+    }
+    th:nth-child(5),
+    td:nth-child(5) ~ th,
+    td:nth-child(5) ~ td,
+    th:nth-child(6),
+    td:nth-child(6) ~ th,
+    td:nth-child(6) ~ td {
+      display: table-cell;
+    } */
 }
 
 
