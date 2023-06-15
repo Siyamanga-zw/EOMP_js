@@ -1,5 +1,6 @@
 body{
     background-image:url('https://i.postimg.cc/LsSNzs3Q/background.jpg')!important;
+    overflow-x: hidden;
 }
 .navbar-brand span{
     color:#f78da7;

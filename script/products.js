@@ -60,9 +60,25 @@ try{
 }
 
 let carts = [];
+let inOrout=false;
 function addToCart(item) {
-    carts.push(item)
-  localStorage.setItem("cartItems", JSON.stringify(carts));
-  alert("Item added to cart");
+    if (outOfStock(item.id)) {
+        alert("OUT OF STOCK!")
+    } else {
+        carts.push(item)
+        localStorage.setItem("cartItems", JSON.stringify(carts));
+        alert("Item added to cart");
+    }
+   
 }
-
+function outOfStock(itemId) {
+   
+    carts=JSON.parse(localStorage.getItem('cartItems'))
+    carts.forEach((item)=>{
+        if (item.id === itemId) {
+            inOrout=true
+        } 
+    })
+    return inOrout
+    
+}
