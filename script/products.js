@@ -6,37 +6,37 @@ let productsContent = JSON.parse(localStorage?.getItem("products")) ?
             {
                 id:1,
                 name:'Lancome',
-                image:'https://i.postimg.cc/8sQt6C2d/lanc-ome.png ',
+                image:'https://i.ibb.co/jTg1cvX/71c-Afc9p4-GL.jpg',
                 price:'R 2830.00',
             },
             {
                 id:2,
                 name:'Poison Girl',
-                image:'https://i.postimg.cc/kM2L6Rrm/poison-girl.webp',
+                image:'https://i.ibb.co/crZFKTs/poison-girl.webp',
                 price:'R 1799.99'
             },
             {
                 id:3,
                 name:'Royalty scent',
-                image:'https://i.postimg.cc/xTzZTwwy/royalty.webp',
+                image:'https://i.ibb.co/6JsWFYw/1699552977-giorgio-armani-my-way-perfume-654d1ec41de5b.png',
                 price: 'R 2000.50'
             },
             {
                 id:4,
                 name:'Ellie saab',
-                image:'https://i.postimg.cc/nhBdKq2y/eliesaab.jpg',
+                image:'https://i.ibb.co/CsCH1Ny/tiffany.webp',
                 price:'R 1010.00'
             },
             {
                 id:5,
                 name:'Narciso rodriguez',
-                image:'https://i.postimg.cc/J0YFgmHS/1590012511-b37a1be8-95a1-44c7-81c8-ef5801a48026.jpg',
+                image:'https://i.ibb.co/6JsWFYw/1699552977-giorgio-armani-my-way-perfume-654d1ec41de5b.png',
                 price:'R 3899.99'
             },
             {
                 id:6,
                 name:'chance channel',
-                image:'https://i.postimg.cc/y8ZGfM1r/chance-channl.jpg',
+                image:'https://i.ibb.co/SQZDZvC/chance-chanel.jpg',
                 price:'R 7880.00'
             }
         ]
